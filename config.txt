@@ -1,0 +1,17 @@
+Button1      = Default1  = 1
+Button2      = Default2  = 2
+Button3      = Default3  = 3
+Button4      = Default4  = 4
+Button5      = Default5  = 5
+Button6      = Default6  = 6
+Button7      = Default7  = 7
+Button8      = Default8  = 8
+Button9      = Default9  = 9
+Button10     = Default10 = 10
+Button11     = Default11 = 11
+Button12     = Default12 = 12
+Button13     = Default13 = 13
+Button14     = Default14 = 14
+Button15     = Default15 = 15
+TimerTitle   = HelloWorld
+ControlTitle = Button Controls
