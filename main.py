@@ -1,3 +1,4 @@
+import serial
 import tkinter as tk
 from tkinter import ttk
 import re
@@ -31,7 +32,9 @@ def timerSetup(window):
 # This is the event called when a control button is pressed
 def controlTrigger(event):
     buttonName = event.widget.cget('text')
-    print(f"control code {dic[buttonName.strip()]}")
+    cmd = dic[buttonName.strip()] + '\r'
+    ardData.write(cmd.encode())
+    # print(f"control code {dic[buttonName.strip()]}")
 
 
 # This handles setting up the buttons in their frame
@@ -142,6 +145,7 @@ def hintPicSetup(window):
 
 
 def main():
+    
     # This is the frame that holds all the individual elements of the gui
     window = tk.Tk()
     # Sets up the timer framing
@@ -159,5 +163,6 @@ def main():
 # Takes the config file, parses it, and creates a dictionary with various mappings
 # Leaves dic as a global variable for the other functions to access
 dic = configLoadIn()
+ardData = serial.Serial('com3', 115200)
 main()
 
